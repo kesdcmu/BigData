@@ -73,3 +73,15 @@ SELECT COUNT(*) FROM 'C:\Users\KaiES\Downloads\data\taxi\fhv_tripdata.parquet';
 SELECT COUNT(*) FROM 'C:\Users\KaiES\Downloads\data\taxi\fhvhv_tripdata.parquet';
 SELECT COUNT(*) FROM 'C:\Users\KaiES\Downloads\data\taxi\yellow_tripdata.parquet';
 
+##Code Adapted from ChatGBT
+import duckdb 
+
+## Connect to the DuckDB database
+con = duckdb.connect(database=':memory:');
+
+# Execute a SELECT query
+result = con.execute("SELECT * FROM fhv_bases");
+
+# Fetch and print the results
+for row in result.fetchall():
+    print(row);
