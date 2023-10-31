@@ -1,3 +1,5 @@
-.multiline
+
 .mode quote
-SET temp_directory TO '/tmp';
+SET temp_directory TO '/Downloads';
+
+
